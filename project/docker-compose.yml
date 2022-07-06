@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  app:
+    build: ./app
+    container_name: app
+    restart: always
+    expose: 
+      - 5000
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - 80:80
+    
+  
